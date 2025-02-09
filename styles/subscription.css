@@ -1,0 +1,96 @@
+& .subscription {  
+  text-align: center;
+  padding-block: 6.5rem;   
+  display: flex;
+  flex-direction: column;  
+  overflow: hidden;
+  & h2 { 
+    width: 13.81rem; 
+    font-size: 1.5rem;  
+    margin: 0px auto 48px; 
+  }
+} 
+html {
+  overflow-x: hidden;
+}
+html::-webkit-scrollbar { 
+  display: none;   
+}
+& .pricing {    
+  display: flex; 
+  align-items: center;    
+  padding: 3.25rem;
+  gap: 1rem;    
+  overflow-x: scroll;  
+}   
+& .pricing::-webkit-scrollbar { 
+  scroll-behavior: smooth;
+}
+@media (width >= 80rem) { 
+  & .subscription {   
+    height: 77.12rem; 
+    & h2 {  
+      font-size: var(--title-sm);
+      text-align: center; 
+      width: 18.37rem; 
+      margin: 5.81rem auto 3.5rem;  
+    }
+  }
+  & .pricing { 
+    justify-content: center;  
+    width: 65.62rem; 
+    height: 37.87rem;
+    margin: auto;   
+    & .monthly {     
+      margin: unset;
+      transform: rotate(0deg);  
+      & .star-1 {  
+        position: absolute;  
+        top: -2.5rem;   
+        left: -2.81rem; 
+      }
+      & .star-2 {  
+        position: absolute;
+        top: 0;  
+        left: -2.81rem; 
+      }   
+    }  
+    & .annual {  
+      margin: unset;
+      transform: rotate(0deg);  
+      & .star-1 {   
+        position: absolute;   
+        bottom: -2.18rem;   
+        left: 18.56rem; 
+      } 
+      & .star-2 {  
+        position: absolute;   
+        bottom: -2.18rem; 
+        left: 16.87rem; 
+      } 
+      & .star-2:hover {
+        transform: rotate(-8deg); 
+      }   
+    }  
+  }  
+  & .pricing:hover {    
+    & .monthly {     
+      transform: translate(-18.75rem, 3.75rem) rotate(-8deg); 
+      transition: transform 500ms ease;    
+      z-index: 0;
+    }  
+    & .monthly:hover {
+      z-index: 3;
+    } 
+    & .annual {  
+      transform: translate(18.75rem, 3.75rem) rotate(8deg);
+      transition: transform 500ms ease;   
+    }    
+    & .biannual {
+      background-color: var(--shape-base);    
+    } 
+    & .biannual:hover {
+      background-color: var(--shape-hover); 
+    } 
+  }
+}
