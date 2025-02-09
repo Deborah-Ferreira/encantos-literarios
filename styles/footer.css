@@ -1,0 +1,229 @@
+& footer {   
+  background: url(../assets/book-trace-background-mobile.svg) no-repeat  center/25.87rem;  
+  padding: 6.12rem 2rem 2.37rem;
+  align-items: center;
+  & .brand {    
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column; 
+    gap: 1.12rem;  
+    & .logo-horizontal {    
+      display: flex;
+      flex-direction: column;  
+      width: 9.93rem;  
+      color: aliceblue; 
+      margin: auto; 
+    }  
+    & hr {
+      border: 1px solid var(--shape-stroke);   
+    }
+    & .social-links {     
+      display: flex; 
+      margin-bottom: 40px;
+      & img {    
+        margin: auto; 
+      }
+      & img:hover { 
+        display: flex;
+        justify-content: center; 
+        padding: 8px;  
+      }
+      & img:nth-child(1) {
+        background: url(../assets/icons/instagram.svg) no-repeat center/24px;
+        padding: 24px;
+      }
+      & img:nth-child(1):hover {
+        background: url(../assets/icons/instagram-hover.svg) no-repeat center/24px;
+        padding: 24px; 
+        border-radius: 50%;
+        background-color: var(--shape-stroke);
+      }
+      & img:nth-child(2) {
+        background: url(../assets/icons/twitter.svg) no-repeat center/24px;
+        padding: 24px;
+      }
+      & img:nth-child(2):hover {
+        background: url(../assets/icons/twitter-hover.svg) no-repeat center/24px;
+        padding: 24px;
+        border-radius: 50%;
+        background-color: var(--shape-stroke);
+      }
+      & img:nth-child(3) {
+        background: url(../assets/icons/facebook.svg) no-repeat center/24px;
+        padding: 24px;
+      }
+      & img:nth-child(3):hover {
+        background: url(../assets/icons/facebook-hover.svg) no-repeat center/24px;
+        padding: 24px;
+        border-radius: 50%;
+        background-color: var(--shape-stroke);
+      }
+      & img:nth-child(4) {
+        background: url(../assets/icons/discord.svg) no-repeat center/24px;
+        padding: 24px;
+      }
+      & img:nth-child(4):hover {
+        background: url(../assets/icons/discord-hover.svg) no-repeat center/24px;
+        padding: 24px;
+        border-radius: 50%;
+        background-color: var(--shape-stroke);
+      }
+      & img:nth-child(5) {
+        background: url(../assets/icons/whatsapp.svg) no-repeat center/24px;
+        padding: 24px;
+      }
+      & img:nth-child(5):hover {
+        background: url(../assets/icons/whatsapp-hover.svg) no-repeat center/24px;
+        padding: 24px;
+        border-radius: 50%;
+        background-color: var(--shape-stroke);
+      }
+      & img:nth-child(6) {
+        background: url(../assets/icons/mail.svg) no-repeat center/24px;
+        padding: 24px;
+      }
+      & img:nth-child(6):hover {
+        background: url(../assets/icons/mail-hover.svg) no-repeat center/24px;
+        padding: 24px;
+        border-radius: 50%;
+        background-color: var(--shape-stroke);
+      }
+    }   
+  }
+  & nav {  
+    font-size: var(--title-sx);
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;   
+    bottom: 5.62rem;
+    & h4 {
+      padding-bottom: 1.25rem; 
+    }
+    & a { 
+      color: var(--blue-light);
+      font: var(--link);
+      display: flex;
+      flex-direction: column;  
+      padding-bottom: 1rem; 
+    } 
+    & a:hover {
+      color: var(--text-body);
+    }
+  }
+} 
+@media (width >= 80rem) {
+  & footer {   
+    width: 100%;
+    height: 25.93rem;  
+    padding: unset;
+    background: url(../assets/book-trace-background.png) no-repeat center/100%; 
+    position: relative;
+    & .brand {     
+      display: flex;
+      flex-direction: column; 
+      width: 18.75rem;
+      gap: .87rem;   
+      position: absolute;
+      top: 10.62rem; 
+      left: 10rem;   
+      & .logo-horizontal {     
+        display: flex;
+        flex-direction: column;   
+        width: 100%;
+      }  
+      & hr { 
+        border: 1px solid var(--shape-stroke);   
+      }
+      & .social-links {   
+        & img:hover { 
+          display: flex;
+          justify-content: center; 
+          padding: .5rem;  
+        }
+        & img:nth-child(1) {
+          background: url(../assets/icons/instagram.svg) no-repeat center/1.5rem;
+          padding: 1.5rem;
+        }
+        & img:nth-child(1):hover {
+          background: url(../assets/icons/instagram-hover.svg) no-repeat center/1.5rem;
+          padding: 1.5rem; 
+          border-radius: 50%;
+          background-color: var(--shape-stroke);
+        }
+        & img:nth-child(2) {
+          background: url(../assets/icons/twitter.svg) no-repeat center/1.5rem;
+          padding: 1.5rem;
+        }
+        & img:nth-child(2):hover {
+          background: url(../assets/icons/twitter-hover.svg) no-repeat center/1.5rem;
+          padding: 1.5rem;
+          border-radius: 50%;
+          background-color: var(--shape-stroke);
+        }
+        & img:nth-child(3) {
+          background: url(../assets/icons/facebook.svg) no-repeat center/1.5rem;
+          padding: 1.5rem;
+        }
+        & img:nth-child(3):hover {
+          background: url(../assets/icons/facebook-hover.svg) no-repeat center/1.5rem;
+          padding: 1.5rem;
+          border-radius: 50%;
+          background-color: var(--shape-stroke);
+        }
+        & img:nth-child(4) {
+          background: url(../assets/icons/discord.svg) no-repeat center/1.5rem;
+          padding: 1.5rem;
+        }
+        & img:nth-child(4):hover {
+          background: url(../assets/icons/discord-hover.svg) no-repeat center/1.5rem;
+          padding: 1.5rem;
+          border-radius: 50%;
+          background-color: var(--shape-stroke);
+        }
+        & img:nth-child(5) {
+          background: url(../assets/icons/whatsapp.svg) no-repeat center/1.5rem;
+          padding: 1.5rem;
+        }
+        & img:nth-child(5):hover {
+          background: url(../assets/icons/whatsapp-hover.svg) no-repeat center/1.5rem;
+          padding: 1.5rem;
+          border-radius: 50%;
+          background-color: var(--shape-stroke);
+        }
+        & img:nth-child(6) {
+          background: url(../assets/icons/mail.svg) no-repeat center/1.5rem;
+          padding: 1.5rem;
+        }
+        & img:nth-child(6):hover {
+          background: url(../assets/icons/mail-hover.svg) no-repeat center/1.5rem;
+          padding: 1.5rem;
+          border-radius: 50%;
+          background-color: var(--shape-stroke);
+        }
+      }  
+    }
+    & nav {   
+      font-size: var(--title-sx);
+      display: flex; 
+      gap: 3.5rem;  
+      position: absolute;
+      right: 10rem; 
+      top: 10.62rem; 
+      & h4 {
+        padding-bottom: 1.25rem; 
+      }
+      & a { 
+        color: var(--blue-light);
+        font: var(--link);
+        display: flex;
+        flex-direction: column;  
+        padding-bottom: 1rem; 
+      } 
+      & a:hover {
+        color: var(--text-body);
+      }
+    }
+  }
+}
