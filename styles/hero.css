@@ -1,0 +1,65 @@
+& .hero { 
+  height: 35.25rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url(../assets/images/hero-background.png) no-repeat center/cover;
+  animation: aparecer 2s ease-in-out forwards;
+} 
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  } 
+  50% {
+    opacity: 10%;
+    background-image: radial-gradient(90deg,
+        rgb(0, 0, 0),
+        rgb(0, 0, 0)) no-repeat;
+    background-position: center;
+  } 
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+    background-position: center;
+  }
+} 
+@keyframes sumir {
+  0% {
+    opacity: 0;
+  } 
+  100% {
+    opacity: 1;
+  }
+} 
+& main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: auto; 
+  margin-top: 1.75rem;
+  max-width: 20.93rem;
+  gap: 1rem; 
+  & h1 {
+    font-size: var(--title-lg);
+    color: var(--text-title);
+  } 
+  & p {
+    font-size: var(--body-sm);
+    color: var(--text-body);
+  }
+} 
+@media (width >=80rem) {
+  & .hero {
+    height: 59.25rem;
+  } 
+  & main {
+    margin-top: 3.5rem;
+    max-width: 40rem; 
+    & p {
+      font-size: var(--body-lg);
+      width: 35.5rem;
+    }
+  }
+}
