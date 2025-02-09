@@ -1,0 +1,230 @@
+& .content { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;    
+  & .animate-color {  
+    padding-block: 5.12rem 5.43rem; 
+    margin-top: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-content: center;  
+    color: hsla(197, 14%, 90%, 0.505); 
+    width: 20.9rem; 
+    & span {
+      font-size: var(--body-md);
+      text-transform: none;
+    }
+  } 
+  &:not(:hover) {   
+    & .book,
+    .box > :nth-child(1),
+    .box > :nth-child(2) {
+      animation: go-out 900ms;
+      opacity: 1;
+    }
+  }
+} 
+& .content:hover { 
+  position: relative; 
+  animation-delay: 0.5s;
+  & .content {
+    animation-delay: 0.5s; 
+    height: 4.3rem;  
+  } 
+  & .book {
+    background: url(../assets/images/book.svg-mobile.svg) no-repeat center/2.5rem; 
+    padding: 5.5rem;
+    position: absolute;
+    top: -0.5rem;
+    left: 51%;    
+    animation: to-enter 200ms ease backwards;
+    opacity: 1;
+    animation-delay: 0.5s; 
+    &:hover { 
+      transition: 200ms ease-in-out;
+      transform: scale(110%) rotate(8deg); 
+    } 
+    &:not(:hover) { 
+      top: -0.5rem;
+      left: 51%; 
+      background-size: 2.5rem; 
+    }
+  } 
+  & .animate-color { 
+    & span { 
+      &:nth-child(1) {
+        color: var(--text-title); 
+        animation: change-color 200ms ease backwards;
+        animation-delay: 0.5s; 
+        & strong {
+          color: var(--blue-light);
+          animation: change-color 200ms ease backwards;
+          animation-delay: 0.5s;
+        }
+      } 
+      &:nth-child(2) {
+        color: var(--text-title);
+        animation: change-color 300ms ease backwards;
+        animation-delay: 1s;
+
+        & strong {
+          color: var(--blue-light);
+          animation: change-color 300ms ease backwards;
+          animation-delay: 1s;
+        }
+      }
+
+      &:nth-child(3),
+      .only-mobile {
+        color: var(--text-title);
+        animation: change-color 400ms ease backwards;
+        animation-delay: 1.5s;
+
+        & strong {
+          color: var(--blue-light);
+          animation: change-color 400ms ease backwards;
+          animation-delay: 1.5s;
+        }
+      }
+
+    }
+  } 
+  & .box {  
+    position: relative;
+    width: 20.9rem; 
+    & :nth-child(1) {  
+      position: absolute; 
+      top: -165px;
+      left: -3.7rem;
+      background: url(../assets/images/mystery-opened-spellbook-mobile.png) no-repeat center/2.4rem; 
+      padding: 5rem; 
+      animation: to-enter 200ms ease backwards;
+      opacity: 1;
+      animation-delay: 1s; 
+      &:hover {
+        transform: scale(110%) rotate(8deg);
+        transition: transform 300ms ease-in-out; 
+      }
+    } 
+    & :nth-child(2) {
+      position: absolute;
+      right: -2.8rem;
+      top: -145px;
+      transform: rotate(-5deg);
+      background: url(../assets/images/ball-mobile.png) no-repeat center/2.5rem; 
+      padding: 4.5rem; 
+      animation: to-enter 200ms ease backwards;
+      opacity: 1;
+      animation-delay: 1.5s; 
+      &:hover {
+        transform: scale(110%) rotate(5deg);
+        transition: transform 300ms ease-in-out; 
+      } 
+    } 
+  }
+}  
+@media (width > 80rem) {
+  & .content {     
+    margin-block: 6rem 5rem;
+    & .animate-color {    
+      padding-block: 7.12rem;
+      line-height: 200%; 
+      width: 71rem;  
+      position: relative; 
+      & span { 
+        font-size: var(--subtitle);
+      } 
+      & .only-mobile {
+        display: none;
+      }
+    } 
+  } 
+  & .content:hover {
+    & .animate-color {  
+      & span {
+        font-size: var(--subtitle);
+      }
+    } 
+    & .book { 
+      background: url(../assets/images/Book.svg) no-repeat center/5.5rem; 
+      padding: 5.5rem;
+      top: .5rem;
+      left: 43%;  
+      &:not(:hover) {
+        background-size: 5.5rem;
+        top: .5rem;
+        left: 43%;
+      }
+    } 
+    & .box {    
+      width: 71rem;
+      position: absolute;
+      top: 12.5rem; 
+      & :nth-child(1) {
+        top: -0.5rem;  
+        left: -1.2rem;
+        background: url(../assets/images/mystery-ouija-planchette.png) no-repeat center/5rem; 
+      } 
+      & :nth-child(2) {
+        background-size: 4.5rem; 
+        top: -0.5rem;  
+      } 
+    } 
+  } 
+  & :not(:hover) {
+    & .book {  
+      &:not(:hover) {
+        background-size: 5.5rem;
+        top: .5rem;
+        left: 43%; 
+      }
+    }
+    & .box { 
+      position: absolute;
+      top: 12.5rem;  
+      &:nth-child(1) { 
+        top: -0.5rem;  
+      }
+    } 
+    } 
+    & .box {  
+      &:not(:hover) {
+        width: 71rem; 
+        & :nth-child(1) {
+          top: -0.5rem; 
+          left: -1.2rem;
+          background: url(../assets/images/mystery-ouija-planchette.png) no-repeat center/5rem;  
+        } 
+        & :nth-child(2) { 
+          background-size: 4.5rem; 
+          top: -0.5rem; 
+        }
+      }
+    }
+  } 
+@keyframes change-color {
+  0% {
+    color: hsla(197, 14%, 90%, 0.505);
+  }
+} 
+@keyframes go-out {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  } 
+  100% {
+    transform: scale(0);
+    opacity: 1;
+  }
+} 
+@keyframes to-enter {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  } 
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
