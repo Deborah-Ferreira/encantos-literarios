@@ -60,3 +60,11 @@ span {
   text-transform: uppercase;
   letter-spacing: .05;
 } 
+@media (width >= 80rem) { 
+  & header {
+    --p-header: 3.5rem 10rem;
+  } 
+  & main {
+    --title-lg: 3rem;
+  } 
+}
